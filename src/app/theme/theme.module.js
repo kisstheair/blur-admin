@@ -1,6 +1,6 @@
 /**
  * @author v.lugovsky
- * created on 15.12.2015
+ * created on 15.12.2015    在这里定义BlurAdmin.theme 模块      同时依赖 BlurAdmin.theme.components 和BlurAdmin.theme.inputs  模块
  */
 (function () {
   'use strict';

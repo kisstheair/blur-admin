@@ -1,6 +1,8 @@
 /**
  * @author v.lugovsky
  * created on 16.12.2015
+ * 这是根模块下面的第一个模块 BlurAdmin.pages 定义第一个模块的地方。
+ *                                            pages 模块 又导入下一级的模块   如：BlurAdmin.pages.dashboard。。。。。。。对应各个目录
  */
 (function () {
   'use strict';
@@ -15,7 +17,7 @@
     'BlurAdmin.pages.tables',
     'BlurAdmin.pages.charts',
     'BlurAdmin.pages.maps',
-    'BlurAdmin.pages.profile',
+    'BlurAdmin.pages.profile'
   ])
       .config(routeConfig);
 

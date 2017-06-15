@@ -1,8 +1,8 @@
 'use strict';
 
-var path = require('path');
-var gulp = require('gulp');
-var conf = require('./conf');
+var path = require('path');      //nodeJs 的文件路径模块
+var gulp = require('gulp');      //gulp模块
+var conf = require('./conf');     //自定义的 配置模块
 
 var $ = require('gulp-load-plugins')();
 

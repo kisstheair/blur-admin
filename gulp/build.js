@@ -1,12 +1,14 @@
 'use strict';
 
-var path = require('path');
-var gulp = require('gulp');
-var conf = require('./conf');
+var path = require('path');         //nodeJs 的文件路径模块
+var gulp = require('gulp');        //gulp模块
+var conf = require('./conf');      // 配置模块
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
 });
+
+
 
 gulp.task('partials', function () {
   return gulp.src([
@@ -24,6 +26,8 @@ gulp.task('partials', function () {
     }))
     .pipe(gulp.dest(conf.paths.tmp + '/partials/'));
 });
+
+
 
 gulp.task('html', ['inject', 'partials'], function () {
   var partialsInjectFile = gulp.src(path.join(conf.paths.tmp, '/partials/templateCacheHtml.js'), { read: false });
@@ -69,6 +73,9 @@ gulp.task('html', ['inject', 'partials'], function () {
     .pipe($.size({ title: path.join(conf.paths.dist, '/'), showFiles: true }));
   });
 
+
+
+
 // Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
 gulp.task('fonts', function () {
@@ -76,6 +83,8 @@ gulp.task('fonts', function () {
     .pipe($.flatten())
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
+
+
 
 gulp.task('other', ['copyVendorImages'], function () {
   var fileFilter = $.filter(function (file) {
@@ -91,8 +100,11 @@ gulp.task('other', ['copyVendorImages'], function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
+
+
+
 gulp.task('clean', function () {
   return $.del([path.join(conf.paths.dist, '/'), path.join(conf.paths.tmp, '/')]);
 });
 
-gulp.task('build', ['html', 'fonts', 'other']);
+gulp.task('build', ['html', 'fonts', 'other']);   //主任务名称为 build   要去干3件事情

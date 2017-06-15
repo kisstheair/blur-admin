@@ -9,7 +9,7 @@
 var gutil = require('gulp-util');
 
 /**
- *  The main paths of your project handle these with care
+ *  The main paths of your project handle these with care    这是项目关心的主要几个目录，  在这里配置，可以作为项目的配置文件
  */
 exports.paths = {
   src: 'src',
@@ -22,7 +22,7 @@ exports.paths = {
 /**
  *  Wiredep is the lib which inject bower dependencies in your project
  *  Mainly used to inject script tags in the index.html but also used
- *  to inject css preprocessor deps and js files in karma
+ *  to inject css preprocessor deps and js files in karma               主要把 所依赖的 css js lib  导入到index中
  */
 exports.wiredep = {
   exclude: [/\/bootstrap\.js$/, /\/bootstrap-sass\/.*\.js/, /\/require\.js/],
