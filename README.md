@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/akveo/blur-admin.svg?branch=master)](https://travis-ci.org/akveo/blur-admin)
 
-# BlurAdmin Angular admin panel front-end framework
+# BlurAdmin Angular admin panel front-end framework  建立到我的仓库中了，  尝试提交一下
 
 Customizable admin panel framework made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get latest news about this template first!
 
