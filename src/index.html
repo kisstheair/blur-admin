@@ -27,10 +27,10 @@
 </head>
 <body>
 <div class="body-bg"></div>
-<main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">
+<main ng-if="$pageFinishedLoading" ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">     <!--这是主模块， 只有在加载图片结束的时候 才会显示-->
 
-  <ba-sidebar></ba-sidebar>
-  <page-top></page-top>
+  <ba-sidebar></ba-sidebar>                <!--这是侧边栏 模块，写成一个指令的样式-->
+  <page-top></page-top>                    <!--这是顶部模块  ，写成一个指令的样式-->
 
   <div class="al-main">
     <div class="al-content">
@@ -50,12 +50,12 @@
         <li><i class="socicon socicon-github"></i></li>
       </ul>
     </div>
-  </footer>
+  </footer>     <!---这是底部的 每个页面都有的分享按钮一直存在的  Facebook  tumblr   -->
 
-  <back-top></back-top>
+  <back-top></back-top>                       <!--这是返回到顶部的按钮，  只有在滑动条出现的时候才会出现-->
 </main>
 
-<div id="preloader" ng-show="!$pageFinishedLoading">
+<div id="preloader" ng-show="!$pageFinishedLoading">     <!--这是加载图片，一直转圈，只有加载完成，才不显示-->
   <div></div>
 </div>
 
