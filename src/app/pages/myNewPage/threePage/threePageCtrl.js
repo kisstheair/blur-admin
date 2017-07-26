@@ -11,7 +11,8 @@
     function threePageCtrl($scope,$http) {
         $http({
             method:"GET",
-            url:'app/pages/myNewPage/threePage/threePageData.json',
+            //url:'app/pages/myNewPage/threePage/threePageData.json',
+            url:'http://192.168.0.176:8080/kecloud/projectAction!getProjectList?projecttypeId=1&organizationId=',
             param:{}
         }).then(function sucess(response) {
             $scope.AAA = response.data;
