@@ -49,11 +49,13 @@
 
     $scope.updateWeather = function () {
       $http({
-        method: method, url: url, params: {
-          appid: key,
-          lat: $scope.geoData.geoplugin_latitude,
-          lon: $scope.geoData.geoplugin_longitude,
-          units: $scope.units
+          method: method,
+          url: url,
+          params: {
+            appid: key,
+            lat: $scope.geoData.geoplugin_latitude,
+            lon: $scope.geoData.geoplugin_longitude,
+            units: $scope.units
         }
       }).then(function success(response) {
         saveWeatherData(response.data);

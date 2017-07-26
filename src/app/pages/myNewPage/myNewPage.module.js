@@ -27,8 +27,23 @@
                 sidebarMeta: {
                     order: 0
                 }
+            }).state('myNewPage.secondPage',{
+                url:'/secondPage',
+                templateUrl:'app/pages/myNewPage/secondPage/secondPage.html',
+                controller:'secondPageCtrl',
+                title:'secondPage',
+                sidebarMeta: {
+                    order: 100
+                }
+            }).state('myNewPage.threePage',{
+                url:'/threePage',
+                templateUrl:'app/pages/myNewPage/threePage/threePage.html',
+                controller:'threePageCtrl',
+                title:'threePage',
+                sidebarMeta: {
+                    order: 200
+                }
             }
-
         );
     }
 
